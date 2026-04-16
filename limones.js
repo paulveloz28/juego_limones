@@ -1,5 +1,6 @@
 let canvas=document.getElementById("areaJuego");
 let ctx=canvas.getContext("2d");
+let intervalo;
 
 const ALTURA_SUELO=40;
 const ALTURA_PERSONAJE=60;
@@ -16,7 +17,7 @@ let vidas=3;
 let velocidadCaida=200;
 
 function iniciar(){
-    setInterval(bajarLimon,velocidadCaida); //primerParametro: function, segundoParametro: tiempo en milisegundos 
+    intervalo=setInterval(bajarLimon,velocidadCaida); //primerParametro: function, segundoParametro: tiempo en milisegundos 
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -79,6 +80,7 @@ function detectarAtrapado(){
         }else if(puntaje==6){
             velocidadCaida=100;
         } else if(puntaje==10){
+            clearInterval(intervalo);
             alert("GANADOR");
         }
     }
@@ -91,6 +93,7 @@ function detectarPiso(){
         mostrarEnSpan("txtVidas",vidas);
         //mostrar un alert
         if(vidas==0){
+            clearInterval(intervalo);
             alert("GAME OVER");
         }
     }
