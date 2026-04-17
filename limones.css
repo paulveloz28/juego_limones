@@ -1,31 +1,107 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
+/* CONTENEDOR */
 .contenedor {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
-  display: block;
-  margin: 20px auto;
+/* HEADER */
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
 }
 
+.subtitulo {
+  color: #94a3b8;
+  margin-bottom: 5px;
+}
+
+.autor {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* TARJETA DEL JUEGO */
+.game-card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-top: 20px;
+}
+
+/* CANVAS */
+canvas {
+  background-color: #020617;
+  border-radius: 12px;
+  border: 2px solid #38bdf8;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+/* PANEL */
 .panel {
+  display: flex;
+  justify-content: space-around;
   margin: 20px 0;
 }
 
+.info {
+  background: #1e293b;
+  padding: 10px 20px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+
+.info p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.info span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+/* BOTONES */
+.botones {
+  margin-top: 15px;
+}
+
 .botones button {
-  margin: 5px;
-  padding: 10px 16px;
+  margin: 8px;
+  padding: 12px 20px;
   font-size: 16px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+/* HOVER */
+.botones button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+/* BOTÓN REINICIAR */
+.btn-reiniciar {
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
+}
+
+.btn-reiniciar:hover {
+  box-shadow: 0 5px 15px rgba(244, 63, 94, 0.4);
 }
