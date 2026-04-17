@@ -1,10 +1,28 @@
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  /* Imagen de fondo */
+  background-image: url("fondoAtary.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /* Oscurecer un poco para que se vea el juego */
+  position: relative;
   color: white;
   text-align: center;
   margin: 0;
   padding: 20px;
+}
+
+/* CAPA OSCURA ENCIMA (MEJORA VISIBILIDAD) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* ajusta entre 0.5 - 0.7 */
+  z-index: -1;
 }
 
 /* CONTENEDOR */
