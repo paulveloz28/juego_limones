@@ -124,23 +124,24 @@ canvas {
   box-shadow: 0 5px 15px rgba(244, 63, 94, 0.4);
 }
 
-.logo-atari { 
-  width: 120px;
-  margin-bottom: 10px;
+.titulo-con-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
 
-  /* Centrado */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* LOGO MÁS PEQUEÑO Y A LA DERECHA */
+.logo-atari {
+  width: 60px;
 
-  /* Efecto glow retro */
-  filter: drop-shadow(0 0 10px rgba(255, 115, 0, 0.6));
+  /* efecto glow */
+  filter: drop-shadow(0 0 8px rgba(255, 115, 0, 0.7));
 
-  /* Animación suave */
   transition: transform 0.3s ease;
 }
 
-/* Pequeño efecto interactivo */
 .logo-atari:hover {
   transform: scale(1.1);
 }
+
