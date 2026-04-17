@@ -105,3 +105,24 @@ canvas {
 .btn-reiniciar:hover {
   box-shadow: 0 5px 15px rgba(244, 63, 94, 0.4);
 }
+
+.logo-atari { 
+  width: 120px;
+  margin-bottom: 10px;
+
+  /* Centrado */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Efecto glow retro */
+  filter: drop-shadow(0 0 10px rgba(255, 115, 0, 0.6));
+
+  /* Animación suave */
+  transition: transform 0.3s ease;
+}
+
+/* Pequeño efecto interactivo */
+.logo-atari:hover {
+  transform: scale(1.1);
+}
