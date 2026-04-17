@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
 
@@ -38,13 +39,41 @@ body::before {
 }
 
 .subtitulo {
-  color: #94a3b8;
-  margin-bottom: 5px;
+  font-family: 'Segoe UI', cursive;
+
+  /* Tamaño más grande */
+  font-size: 20px;
+
+  /* Estilo cursiva */
+  font-style: italic;
+
+  color: #e2e8f0;
+  margin-bottom: 10px;
+
+  /* Toque elegante */
+  text-shadow: 0 0 5px rgba(255,255,255,0.2);
 }
 
 .autor {
-  font-size: 0.9rem;
-  color: #64748b;
+  font-family: 'Press Start 2P', cursive;
+
+  /* Tamaño más grande */
+  font-size: 16px;
+
+  margin-top: 15px;
+
+  /* Color neón estilo Atari */
+  color: #00ff88;
+
+  /* Glow más fuerte */
+  text-shadow: 
+    0 0 5px #00ff88,
+    0 0 10px #00ff88,
+    0 0 20px #00ff88,
+    0 0 40px rgba(0, 255, 136, 0.7);
+
+  /* Espaciado tipo arcade */
+  letter-spacing: 3px;
 }
 
 /* TARJETA DEL JUEGO */
@@ -94,34 +123,79 @@ canvas {
 
 /* BOTONES */
 .botones {
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 25px;
 }
 
+/* BOTONES DIRECCIÓN (ESTILO GAMEPAD) */
 .botones button {
-  margin: 8px;
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  border: 3px solid #1f2937;
   cursor: pointer;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  color: white;
-  transition: all 0.2s ease;
+
+  /* Amarillo limón 🍋 */
+  background: linear-gradient(180deg, #fef08a, #facc15);
+
+  color: #1f2937;
+  font-size: 24px;
+  font-weight: bold;
+
+  /* Sombra tipo botón físico */
+  box-shadow: 
+    0 6px 0 #1f2937,
+    0 10px 15px rgba(0,0,0,0.4);
+
+  transition: all 0.15s ease-in-out;
 }
 
 /* HOVER */
 .botones button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+  box-shadow: 
+    0 8px 0 #1f2937,
+    0 14px 20px rgba(0,0,0,0.5);
 }
 
-/* BOTÓN REINICIAR */
+/* CLICK */
+.botones button:active {
+  transform: translateY(4px);
+  box-shadow: 
+    0 2px 0 #1f2937,
+    0 5px 10px rgba(0,0,0,0.4);
+}
+
+/* BOTÓN REINICIAR (ROJO Y REDONDO 🔴) */
 .btn-reiniciar {
-  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+
+  background: linear-gradient(180deg, #f87171, #dc2626);
+  color: white;
+
+  border: 3px solid #1f2937;
+
+  box-shadow: 
+    0 6px 0 #1f2937,
+    0 10px 15px rgba(0,0,0,0.4);
 }
 
+/* HOVER REINICIAR */
 .btn-reiniciar:hover {
-  box-shadow: 0 5px 15px rgba(244, 63, 94, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 8px 0 #1f2937,
+    0 14px 20px rgba(0,0,0,0.5);
+}
+
+/* CLICK REINICIAR */
+.btn-reiniciar:active {
+  transform: translateY(4px);
 }
 
 .titulo-con-logo {
